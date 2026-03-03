@@ -46,7 +46,7 @@ public class LoginController {
 	} 
 	@GetMapping("/getAll")
     public ResponseEntity<ResponseModel> fetchAllDetails() {
-
+System.out.println("the api is triggered");
         List<LoginModel> result = loginService.fetchAllDetails();
 
         return ResponseEntity.ok(
