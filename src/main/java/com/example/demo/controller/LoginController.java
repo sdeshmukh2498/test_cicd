@@ -43,7 +43,7 @@ public class LoginController {
 	            result,
 	            null
 	    );
-	}
+	} 
 	@GetMapping("/getAll")
     public ResponseEntity<ResponseModel> fetchAllDetails() {
 
