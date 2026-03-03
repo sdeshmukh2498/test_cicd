@@ -1,5 +1,6 @@
 package com.example.demo.serviceImpl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.model.LoginModel;
 import com.example.demo.repo.LoginRepo;
+//import com.example.demo.service.List;
 import com.example.demo.service.LoginService;
 
 import jakarta.validation.Valid;
@@ -50,5 +52,13 @@ public class LoginServiceImpl implements LoginService {
 	            return "User does not exist";
 	        }
 	    }
+
+	 @Override
+	 public List<LoginModel> fetchAllDetails() {
+		// TODO Auto-generated method stub
+		 
+		 List<LoginModel> response = repo.findAll();
+		return response;
+	 }
 
 }
